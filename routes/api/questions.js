@@ -3,6 +3,9 @@ const router = express.Router();
 
 const Query = require('../../models/Query.js');
 
+//Route GET api/questions
+//Getting all FAQs
+//Access Public
 router.get('/', (req,res) => {
   Query.find()
       //.filter({answer:{$ne:""}})
