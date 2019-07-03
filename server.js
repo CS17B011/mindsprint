@@ -10,7 +10,7 @@ var dbUrl = require('./config/env').dbUrl;
 
 //Connecting Database
 mongoose.connect(dbUrl, {useNewUrlParser: true, useCreateIndex: true})
-    .then(() => console.log('Server is Connected...'))
+    .then(() => console.log('Database is Connected...'))
     .catch((err) => console.log(err));
 
 //API Routes
