@@ -1,7 +1,8 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import "./SideDrawer.css";
 
+import '../Toolbar/Toolbar.css';
 const sideDrawer = props => {
   let drawerClasses = "side-drawer";
   if (props.show) {
@@ -9,31 +10,29 @@ const sideDrawer = props => {
   }
   return (
     <nav className={drawerClasses}>
-      <ul>
-        <li>
-          <a href="/">HOME</a>
-        </li>
-        <li>
-          <a href="/">ABOUT</a>
-        </li>
-        <li>
-          <a href="/">DOWNLOADS</a>
-        </li>
-        <li>
-          <a href="/">FAQ</a>
-        </li>
-        <li>
-          <a href="/">CONTACT US</a>
-        </li>
-        <li>
-          <a href="/">LOGIN</a>
-        </li>
-        <li>
-          <a className="special-button__mobile" id="onReg" href="/">
-            REGISTER NOW
-          </a>
-        </li>
-      </ul>
+    <ul>
+          <li id = "home">
+            <Link to = "/">HOME</Link>
+          </li>
+          <li id = "about">
+            <Link to = "/">ABOUT</Link>
+          </li>
+          <li id = "downloads">
+            <Link to = "/">DOWNLOADS</Link>
+          </li>
+          <li id = "faq">
+            <Link to = "/">FAQ</Link>
+          </li>
+          <li id = "login">
+            <Link to = "/login">LOGIN</Link>
+          </li>
+          <li id = "contact">
+            <Link to = "/">CONTACT US</Link>
+          </li>
+          <li>
+            <Link to = "/signin">REGISTER NOW</Link>
+          </li>
+    </ul>
     </nav>
   );
 };
