@@ -1,6 +1,7 @@
 import React from "react";
-
+import {Link} from 'react-router-dom';
 import Burger from "../SideDrawer/Burger";
+
 import "./Toolbar.css";
 
 const toolbar = props => (
@@ -11,38 +12,36 @@ const toolbar = props => (
       </div>
       <div className="spacer2" />
       <div className="toolbar__logo">
-        <a href="/">
+        <Link to = "/">
           <i className="arrow-left fa fas fa-less-than fa-lg" />
           <span className="logo-text">MINDSPRINT</span>
 
           <i className="arrow-right fa fas fa-greater-than fa-lg" />
-        </a>
+        </Link>
       </div>
       <div className="spacer" />
       <div className="toolbar_navigation-items">
         <ul>
-          <li>
-            <a href="/">HOME</a>
+          <li id = "home">
+            <Link to = "/">HOME</Link>
           </li>
-          <li>
-            <a href="/">ABOUT</a>
+          <li id = "about">
+            <Link to = "/">ABOUT</Link>
           </li>
-          <li>
-            <a href="/">DOWNLOADS</a>
+          <li id = "downloads">
+            <Link to = "/">DOWNLOADS</Link>
           </li>
-          <li>
-            <a href="/">FAQ</a>
+          <li id = "faq">
+            <Link to = "/">FAQ</Link>
           </li>
-          <li>
-            <a href="/">LOGIN</a>
+          <li id = "login">
+            <Link to = "/login">LOGIN</Link>
           </li>
-          <li>
-            <a href="/">CONTACT US</a>
+          <li id = "contact">
+            <Link to = "/">CONTACT US</Link>
           </li>
-          <li>
-            <a className="special-button" id="onReg" href="/">
-              REGISTER NOW
-            </a>
+          <li className = "special-button" id = "onReg">
+            <Link to = "/signin">REGISTER NOW</Link>
           </li>
         </ul>
       </div>
