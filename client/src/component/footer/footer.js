@@ -23,22 +23,22 @@ export default class Footer extends Component {
               <ul className="list-unstyled">
                 <li>
                   <a className="white" id="xd" href="#!">
-                    <i class="fab fa-facebook-square">{"   "}Facebook</i>
+                    <i className="fab fa-facebook-square">{"   "}Facebook</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-google"> Google+</i>
+                    <i className="fab fa-google"> Google+</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-twitter"> Twitter</i>
+                    <i className="fab fa-twitter"> Twitter</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-instagram"> Instagram</i>
+                    <i className="fab fa-instagram"> Instagram</i>
                   </a>
                 </li>
               </ul>
@@ -50,22 +50,22 @@ export default class Footer extends Component {
               <ul className="list-unstyled">
                 <li>
                   <a className="white" id="xd" href="#!">
-                    <i class="fab fa-facebook-square">{"   "}Facebook</i>
+                    <i className="fab fa-facebook-square">{"   "}Facebook</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-google"> Google+</i>
+                    <i className="fab fa-google"> Google+</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-twitter"> Twitter</i>
+                    <i className="fab fa-twitter"> Twitter</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-instagram"> Instagram</i>
+                    <i className="fab fa-instagram"> Instagram</i>
                   </a>
                 </li>
               </ul>
@@ -77,7 +77,7 @@ export default class Footer extends Component {
               <ul className="list-unstyled">
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fas fa-map-marked-alt">
+                    <i className="fas fa-map-marked-alt">
                       {" "}
                       IIT Tirupati
                       <br /> Renigunta Road, Settipali Post
@@ -88,17 +88,17 @@ export default class Footer extends Component {
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fas fa-mobile-alt"> +9194XXXXXXX</i>
+                    <i className="fas fa-mobile-alt"> +9194XXXXXXX</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fas fa-at"> XXX@gmail.com</i>
+                    <i className="fas fa-at"> XXX@gmail.com</i>
                   </a>
                 </li>
                 <li>
                   <a className="white" href="#!" id="xd">
-                    <i class="fab fa-internet-explorer"> www.xxx.com</i>
+                    <i className="fab fa-internet-explorer"> www.xxx.com</i>
                   </a>
                 </li>
               </ul>
