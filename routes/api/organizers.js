@@ -15,9 +15,13 @@ router.get('/',(req,res) => {
 // @desc Post create a new organizer
 // @ access Public
 router.post('/', (req,res) => {
+  Organizer.findOne({organizerId: req.body.organizerId})
+      .then(user => {
+        if(user) return res.status(400).json({msg: 'User already exist'});});
   newOrganizer = Organizer({
     organizerId: req.body.organizerId, //Need to check whether it is valid
     name: req.body.name,
+    password: req.body.password,
     address: req.body.address,
     contactNo: req.body.contactNo
     //NoOfStudentEnrolled is defaultly assigned to 0(Need to change this according to your logic)
