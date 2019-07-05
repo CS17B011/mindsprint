@@ -15,6 +15,9 @@ router.get('/',(req,res) => {
 // @desc Post create a new student
 // @ access Public
 router.post('/', (req,res) => {
+  Student.findOne({emailId: req.body.emailId})
+      .then(user => {
+        if(user) return res.status(400).json({msg: 'User already exist'});});
   newStudent = Student({
     fullName: req.body.fullName,
     class: req.body.class,
@@ -23,6 +26,7 @@ router.post('/', (req,res) => {
     state: req.body.state,
     phoneNo: req.body.phoneNo,
     emailId: req.body.emailId,
+    password: req.body.password,
     organizerId: req.body.organizerId ? req.body.organizerId : ""
   });
   newStudent.save()
