@@ -29,6 +29,10 @@ const StudentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  password: {
+    type: String,
+    required: true
+  },
   organizerId: {
     type: String,
     default: ""
