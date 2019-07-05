@@ -5,16 +5,14 @@ import { Link } from 'react-router-dom';
 class Register extends React.Component{
   render(){
     return (
-        <div style = {{marginBottom:"20px",marginTop:"20px"}}>
-        <MDBContainer style = {{justifyContent:"center",display:"flex"}}>
-          <MDBRow >
-            <MDBCol md="6">
+        <div style = {{marginBottom:"20px",marginTop:"100px",minWidth:"0px"}}>
+        <MDBContainer id = "container">
+          <MDBRow  style = {{justifyContent:"center"}} >
+            <MDBCol>
               <MDBCard
                 className="card-image"
                 style={{
-                  backgroundColor:"black",
-                  width: "50rem",
-                  backgroundRepeat:"round"
+                  backgroundColor:"black"
                 }}
               >
                 <div className="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
