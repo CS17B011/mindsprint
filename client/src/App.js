@@ -11,20 +11,20 @@ class App extends React.Component {
   render(){
       return ( 
         <BrowserRouter>
-          <Fragment>
-            <div>
+       
+            <div >
               <Navbar/>
             </div>
-            <div>
+            <div >
               <Route path = "/" exact component = {Corousel}></Route>
               <Route path = "/signin" exact  component = {Register}></Route>
               <Route path = "/login" exact  component = {Login}></Route>
               <Route path="/" exact component={Jumbo} />
             </div>
-            <div>
+            <div >
               <Footer/>
             </div>
-          </Fragment>
+        
         </BrowserRouter>
     );
   }
