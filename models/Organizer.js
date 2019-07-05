@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const OrganizerSchema = new mongoose.Schema({
   organizerId: {
     type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
     required: true
   },
   name: {
