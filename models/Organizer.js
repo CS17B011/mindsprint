@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const OrganizerSchema = mongoose.Schema({
+const OrganizerSchema = new mongoose.Schema({
   organizerId: {
     type: String,
     required: true
