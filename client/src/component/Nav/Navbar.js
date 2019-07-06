@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Toolbar from "./Toolbar/Toolbar";
-import SideDrawer from "./SideDrawer/SideDrawer";
-import Backdrop from "./Backdrop/Backdrop";
+import Toolbar from './Toolbar/Toolbar';
+import SideDrawer from './SideDrawer/SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
 
 class Navbar extends Component {
   state = {
@@ -26,8 +26,11 @@ class Navbar extends Component {
       backdrop = <Backdrop click={this.backdropHandler} />;
     }
     return (
-      <div style={{ height: "100%" }}>
-        <Toolbar drawer={this.sideDrawerHandler} />
+      <div style={{ height: '100%' }}>
+        <Toolbar
+          drawer={this.sideDrawerHandler}
+          xbtn={this.state.sideDrawerOpen}
+        />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
       </div>
