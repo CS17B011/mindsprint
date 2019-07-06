@@ -1,6 +1,31 @@
 const express = require('express');
 const router = express.Router();
-const Student = require('../../models/Student');
+const User = require('../../models/Student');
+const authRoutes = require('../controllers/Authentication');
+const passport = require('passport');
+const allLoginStrategies = require('../services/passport');
+
+//telling passport to use allLoginStrategies
+passport.use(allLoginStrategies.jwtLogin);
+passport.use(allLoginStrategies.localLogin);
+
+//authentication middlewares
+const AuthenticatedUser = passport.authenticate('jwt',{session:false});
+const isLoggedIn = passport.authenticate('local',{session:false});
+
+//registration route
+
+// @route POST api/students
+// @desc Post create a new student
+// @ access Public
+router.post('/register',authRoutes.register);
+
+
+
+//login route
+router.post('/login',isLoggedIn,authRoutes.login);
+
+
 
 // @route GET api/students
 // @desc Get all students
@@ -8,31 +33,10 @@ const Student = require('../../models/Student');
 router.get('/',(req,res) => {
 	Student.find()
 		.then(students => res.json(students))
-		.catch(err => res.status(404).json({msg:"Database Error: Data not received from database"}));
+		.catch(err => res.status(404).json({error:"Database Error: Data not received from database"}));
 });
 
-// @route POST api/students
-// @desc Post create a new student
-// @ access Public
-router.post('/', (req,res) => {
-  Student.findOne({emailId: req.body.emailId})
-      .then(user => {
-        if(user) return res.status(400).json({msg: 'User already exist'});});
-  newStudent = Student({
-    fullName: req.body.fullName,
-    class: req.body.class,
-    schoolName: req.body.schoolName,
-    district: req.body.district,
-    state: req.body.state,
-    phoneNo: req.body.phoneNo,
-    emailId: req.body.emailId,
-    password: req.body.password,
-    organizerId: req.body.organizerId ? req.body.organizerId : ""
-  });
-  newStudent.save()
-      .then((student) => res.json(student))
-      .catch((err) => res.status(400).json({msg:"couldn't insert got an error" + err}));
-});
+
 
 // @route DELETE api/students/id
 // @desc Delete an existing student
