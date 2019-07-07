@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+.jumbotron {
+  padding: 30px; /* fills out the jumbotron */
+  background-color: #111;
+}
+
+.container {
+  width: 1170px; /* specify a width */
+  margin: 0 auto; /* centers the container */
+  padding: 0 15px; /* adds some padding to the left and right*/
+}
+
+.jumbotron .container {
+  max-width: 100%; /* allows the jumbotron to adjust on smaller widths */
+  background-color: #222;
+}
+
+.jumbotron h1 {
+  text-align: center; /* centers the heading */
+  color: #ddd;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#hvr:hover {
+  border: none;
+}
+#mb-0 {
+  margin-bottom: 0;
+}

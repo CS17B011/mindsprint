@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import "./colo.css";
+import Information from "./information.jpg";
+import Second from "./second.jpeg";
+import Third from "./third.jpeg";
 
 class Corousel extends Component {
   render() {
     return (
       <div>
-        <div className="bd-example mt">
+        <div className="bd-example mt-0">
           <div
             id="carouselExampleCaptions"
             className="carousel slide"
@@ -23,20 +26,16 @@ class Corousel extends Component {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  src="https://i.imgur.com/8C01K9U.jpg"
+                  src={Information}
                   className="d-block w-100"
+                  style={{ maxHeight: "850px", minHeight: "232px" }}
                   alt="..."
                 />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </div>
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://wallpaperplay.com/walls/full/2/4/4/147198.jpg"
+                  style={{ maxHeight: "850px", minHeight: "232px" }}
+                  src={Second}
                   className="d-block w-100"
                   alt="..."
                 />
@@ -49,7 +48,8 @@ class Corousel extends Component {
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://wallpaperaccess.com/full/215112.jpg"
+                  style={{ maxHeight: "850px", minHeight: "232px" }}
+                  src={Third}
                   className="d-block w-100"
                   alt="..."
                 />
