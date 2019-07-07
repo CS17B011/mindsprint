@@ -45,10 +45,10 @@ const StudentSchema = new mongoose.Schema({
   }
 });
 
-//pre hooks 
-//the below function will run just before creation of model and before 
+//pre hooks
+//the below function will run just before creation of model and before
 //saving of new user in database
-//before saving of user in database, below function will automatically convert 
+//before saving of user in database, below function will automatically convert
 //password into a hash using bcrypt-nodejs library
 //here async means asyncrounous (it will make function asyncrounous)
 //await keyword will ensure that next line of code will not run until that part

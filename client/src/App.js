@@ -6,9 +6,10 @@ import Footer from "./component/footer/footer";
 import {BrowserRouter,Route} from 'react-router-dom';
 import Login from './component/auth/login';
 import Register from './component/auth/register';
+
 class App extends React.Component {
   render(){
-      return ( 
+      return (
         <BrowserRouter>
           <Fragment>
             <div>

@@ -2,7 +2,11 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
 import './auth.css';
 import { Link } from 'react-router-dom';
+
 class Login extends React.Component{
+  state = {
+    
+  }
   render(){
     return (
         <div style = {{marginBottom:"20px",marginTop:"20px"}}>
