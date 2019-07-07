@@ -26,10 +26,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
 }
-.btn-outline-white {
-  border: solid 3px white;
-  color: white;
-  margin-bottom: 0;
+#hvr:hover {
+  border: none;
 }
 #mb-0 {
   margin-bottom: 0;

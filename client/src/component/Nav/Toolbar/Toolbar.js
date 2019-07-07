@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Burger from "../SideDrawer/Burger";
 import "./Toolbar.css";
@@ -22,27 +23,27 @@ const toolbar = props => (
       <div className="toolbar_navigation-items">
         <ul>
           <li>
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <a href="/">ABOUT</a>
+            <Link to="/about">ABOUT</Link>
           </li>
           <li>
-            <a href="/">DOWNLOADS</a>
+            <Link to="/downloads">DOWNLOADS</Link>
           </li>
           <li>
-            <a href="/">FAQ</a>
+            <Link to="/faqs">FAQ</Link>
           </li>
           <li>
-            <a href="/">LOGIN</a>
+            <Link to="/contact">CONTACT US</Link>
           </li>
           <li>
-            <a href="/">CONTACT US</a>
+            <Link to="/login">LOGIN</Link>
           </li>
           <li>
-            <a className="special-button" id="onReg" href="/">
+            <Link className="special-button" id="onReg" to="/register">
               REGISTER NOW
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -21,7 +21,7 @@ export default class jumbotron extends Component {
               accusamus minus error nisi architecto nulla ipsum dignissimos.
               Odit sed qui, dolorum!
             </p>
-            <button className="btn btn-outline-white btn-md">
+            <button id="hvr" className="btn btn-outline-white btn-md">
               <i className="fas fa-clone left"> View Sample Paper</i>
             </button>
           </div>

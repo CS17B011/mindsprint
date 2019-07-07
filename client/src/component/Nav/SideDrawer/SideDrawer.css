@@ -1,6 +1,6 @@
 .side-drawer {
   height: 100%;
-  background: rgb(250, 250, 250);
+  background: rgb(5, 5, 5);
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .side-drawer li {
@@ -29,7 +29,7 @@
 }
 
 .side-drawer a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -58,4 +58,19 @@
 }
 #onReg {
   transition-delay: 0.1s;
+}
+
+.link-tab li {
+  opacity: 0;
+}
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
