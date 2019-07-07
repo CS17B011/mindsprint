@@ -11,6 +11,7 @@ router.get('/', (req,res) => {
   Query.find( )
       .sort({ date: -1 })
       .then((questions) => res.json(questions))
+      .catch((err)=> res.json({"error":err.message}));
 });
 
 //Route POST api/questions
@@ -19,9 +20,11 @@ router.get('/', (req,res) => {
 router.post('/', (req,res) => {
   const newQuery = Query({
     question: req.body.question,
-    email: req.body.email
+    email: req.body.email,
+    answer:req.body.answer
   });
-  newQuery.save().then(ques => res.json(ques));
+  newQuery.save().then(ques => res.json(ques))
+  .catch((err)=>res.json({"error":"something went wrong"}));
 });
 
 //Route PUT api/questions/id
@@ -32,7 +35,7 @@ router.put('/:id', (req,res) => {
   Query.updateOne({"_id": req.params.id},
       {$set: {"answer": req.body.answer , "date" : Date.now()}})
       .then(answer => res.json(answer))
-      .catch(err => res.status(400).json({"msg" : "Bad Request!!"}));
+      .catch(err => res.status(400).json({"error" : "Bad Request!!"}));
 });
 
 //Route DELETE api/questions/id
