@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./component/Nav/Navbar";
 import Corousel from "./component/corousel/Corousel";
 import Footer from "./component/footer/footer";
+
 import Jumbo from "./component/jumbotron/jumbotron";
 import About from "./component/about/about";
 import Register from "./component/form/register";
