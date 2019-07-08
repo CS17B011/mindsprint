@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./jumbotron.css";
+import { Link } from "react-router-dom";
 
 export default class jumbotron extends Component {
   style = {
@@ -21,9 +22,11 @@ export default class jumbotron extends Component {
               accusamus minus error nisi architecto nulla ipsum dignissimos.
               Odit sed qui, dolorum!
             </p>
-            <button id="hvr" className="btn btn-outline-white btn-md">
-              <i className="fas fa-clone left"> View Sample Paper</i>
-            </button>
+            <Link to="/downloads">
+              <button id="hvr" className="btn btn-outline-white btn-md">
+                <i className="fas fa-clone left">View Sample Paper </i>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

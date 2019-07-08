@@ -1,0 +1,7 @@
+.hvr:hover {
+  background: linear-gradient(to right, rgb(196, 9, 193), #c4c712);
+}
+#center {
+  display: flex;
+  justify-content: center;
+}
