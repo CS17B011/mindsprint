@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Burger from '../SideDrawer/Burger';
-import './Toolbar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import Burger from "../SideDrawer/Burger";
+import "./Toolbar.css";
 
 const toolbar = props => (
   <header className='toolbar'>
@@ -19,25 +20,25 @@ const toolbar = props => (
       <div className='toolbar_navigation-items'>
         <ul>
           <li>
-            <Link to='/'>HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to='/'>ABOUT</Link>
+            <Link to="/about">ABOUT</Link>
           </li>
           <li>
-            <Link to='/'>DOWNLOADS</Link>
+            <Link to="/downloads">DOWNLOADS</Link>
           </li>
           <li>
-            <Link to='/'>FAQ</Link>
+            <Link to="/faqs">FAQ</Link>
           </li>
           <li>
-            <Link to='/login'>LOGIN</Link>
+            <Link to="/contact">CONTACT US</Link>
           </li>
           <li>
-            <Link to='/'>CONTACT US</Link>
+            <Link to="/login">LOGIN</Link>
           </li>
           <li>
-            <Link className='special-button' id='onReg' to='/signin'>
+            <Link className="special-button" id="onReg" to="/register">
               REGISTER NOW
             </Link>
           </li>

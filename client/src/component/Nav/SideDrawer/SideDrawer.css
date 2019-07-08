@@ -22,7 +22,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
 }
 
 .side-drawer li {
@@ -61,18 +60,18 @@
   transition-delay: 0.1s;
 }
 
-.link-tab li{
-  opacity:0;
+.link-tab li {
+  opacity: 0;
 }
 
-
-@keyframes linkFade{
-  from{
-      opacity:0;
-      transform:translateX(-50px);
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  to{
-      opacity:1;
-      transform:translateX(0px);
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
+

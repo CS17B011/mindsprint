@@ -4,7 +4,7 @@ import "./footer.css";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="page-footer font-small blue pt-4">
+      <footer className="page-footer font-small blue pt-4 " id="mb-0">
         <div className="container-fluid text-center text-md-left">
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
@@ -22,22 +22,22 @@ export default class Footer extends Component {
 
               <ul className="list-unstyled">
                 <li>
-                  <a className="white" id="xd" href="#!">
+                  <a id="xd" href="#!">
                     <i className="fab fa-facebook-square">{"   "}Facebook</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-google"> Google+</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-twitter"> Twitter</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-instagram"> Instagram</i>
                   </a>
                 </li>
@@ -49,22 +49,22 @@ export default class Footer extends Component {
 
               <ul className="list-unstyled">
                 <li>
-                  <a className="white" id="xd" href="#!">
+                  <a id="xd" href="#!">
                     <i className="fab fa-facebook-square">{"   "}Facebook</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-google"> Google+</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-twitter"> Twitter</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-instagram"> Instagram</i>
                   </a>
                 </li>
@@ -76,7 +76,7 @@ export default class Footer extends Component {
 
               <ul className="list-unstyled">
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fas fa-map-marked-alt">
                       {" "}
                       IIT Tirupati
@@ -87,17 +87,17 @@ export default class Footer extends Component {
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fas fa-mobile-alt"> +9194XXXXXXX</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fas fa-at"> XXX@gmail.com</i>
                   </a>
                 </li>
                 <li>
-                  <a className="white" href="#!" id="xd">
+                  <a href="#!" id="xd">
                     <i className="fab fa-internet-explorer"> www.xxx.com</i>
                   </a>
                 </li>
@@ -108,7 +108,7 @@ export default class Footer extends Component {
 
         <div className="footer-copyright text-center py-3 indigo">
           © 2019 Copyright:
-          <a href="#1" className="white" id="xd">
+          <a href="#1" id="xd">
             {" "}
             Mindspirint.com
           </a>
