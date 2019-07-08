@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SideDrawer.css";
 
+
 const sideDrawer = props => {
-  let drawerClasses = "side-drawer";
+  let drawerClasses = 'side-drawer';
   if (props.show) {
-    drawerClasses = "side-drawer open";
+    drawerClasses = 'side-drawer open';
   }
   const navLinks = document.querySelectorAll("li.move");
 
