@@ -11,6 +11,9 @@ import Register from "./component/form/register";
 import Login from "./component/form/login";
 import Perks from "./component/Perks/perk";
 import Contact from "./component/contact/contact";
+import Faqs from "./component/faqs/faqs";
+import Query from "./component/query/query";
+// import Downloads from "./component/downloads/download";
 
 class App extends Component {
   render() {
@@ -24,6 +27,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/faqs" component={Faqs} />
+            <Route exact path="/query" component={Query} />
+            {/* <Route exact path="/downloads" component={Downloads} /> */}
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/about" component={About} />
