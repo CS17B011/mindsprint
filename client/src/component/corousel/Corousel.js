@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./colo.css";
 import Information from "./information.jpg";
-import Second from "./second.jpeg";
-import Third from "./third.jpeg";
+import Second from "./second.jpg";
+import Third from "./third.jpg";
 
 class Corousel extends Component {
   render() {
