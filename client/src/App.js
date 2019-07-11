@@ -13,6 +13,7 @@ import Perks from "./component/Perks/perk";
 import Contact from "./component/contact/contact";
 import Faqs from "./component/faqs/faqs";
 import Query from "./component/query/query";
+import School from "./component/form/school";
 // import Downloads from "./component/downloads/download";
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/faqs" component={Faqs} />
+            <Route exact path="/school" component={School} />
             <Route exact path="/query" component={Query} />
             {/* <Route exact path="/downloads" component={Downloads} /> */}
 
