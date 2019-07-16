@@ -7,6 +7,7 @@ const smtp = require('nodemailer-smtp-transport');
 const xoauth2 = require('xoauth2');
 const nodemailer = require('nodemailer');
 const mailerhbs = require('nodemailer-express-handlebars');
+const emailExistence = require('email-existence');
 // const sendVerificationEmail = require('./sendVerificationEmail');
 //token gets created
 //this below function will be called whenever
@@ -94,94 +95,118 @@ exports.register = function(req,res,next){
 
         //saving of new user's data
         await newUser.save()
-        .then(()=>{
-            const secretToken = newUser.secretToken;
-            const emailId = newUser.emailId;
-           
-            // var x = TokenForUser(newUser);
-            // req.headers.authorization = x
-            // console.log('inside register the req.headers looks like');
-            // console.log(req.headers);
-            // res.status(200).json({token:x});
-            const transporter = nodemailer.createTransport(smtp({
-                service: 'gmail',
-                host:'smtp.gmail.com',
-                auth: {
-                  xoauth2:xoauth2.createXOAuth2Generator({
-                    user:"cs18b006@iittp.ac.in",
-                    clientId:"141530558274-mcm7tdqrfl0rmu1cecghbsrr3ar1arcb.apps.googleusercontent.com",
-                    clientSecret:"jgmF6ayErR8DTu7RgATowpY6",
-                    refreshToken:"1/Sdz9xu3KWIV-4d67yTjNqCMtHJkblR4IwiPEbL40Yac"
-                  })
-                }
-              }));
-            //   transporter.use("compile",mailerhbs({
-            //       viewEngine:{
-            //         extName:'.hbs',
-            //         partialsDir:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
-            //         layoutsDir:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
-            //         defaultLayout:"emailVerification.hbs"
-            //       },
-            //       viewPath:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
-            //       extName:'.hbs'
-            //   }));
-              // console.log(u);
-              // if (u!==undefined){
-                  const mailOptions = {
-                    from: 'CS18B006 CHIRAG GUPTA <cs18b006@iittp.ac.in>',
-                    to: emailId,
-                    subject: 'Email verification',
-                    html: `<!doctype html>
-                    <html>
-                      <head>
-                        <meta charset="utf-8">
-                        <style amp4email-boilerplate>body{visibility:hidden}</style>
-                        <script async src="https://cdn.ampproject.org/v0.js"></script>
-                        <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
-                      </head>
-                      <body>
-                        <div>
-                            copy this <strong>${secretToken}</strong>
-                        </div>
-                        <div>
-                            click  <a href = "http://localhost:3000/emailVerification" onclick = "console.log('choga')">here</a> and verify your email.
-                        </div>
-                        <div>Have a nice day.</div>
-                        <script
-                        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                        crossorigin="anonymous"
-                        ></script>
-                        <script
-                        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                        crossorigin="anonymous"
-                        ></script>
-                        <script
-                        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                        crossorigin="anonymous"
-                        ></script>
+        .then(async ()=>{
+            
+                    try{
+                      const secretToken = newUser.secretToken;
+                      const emailId = newUser.emailId;
+                    
+                      // var x = TokenForUser(newUser);
+                      // req.headers.authorization = x
+                      // console.log('inside register the req.headers looks like');
+                      // console.log(req.headers);
+                      // res.status(200).json({token:x});
+                      const transporter = await nodemailer.createTransport(smtp({
+                          service: 'gmail',
+                          host:'smtp.gmail.com',
+                          auth: {
+                            xoauth2:xoauth2.createXOAuth2Generator({
+                              user:"cs18b006@iittp.ac.in",
+                              clientId:"141530558274-mcm7tdqrfl0rmu1cecghbsrr3ar1arcb.apps.googleusercontent.com",
+                              clientSecret:"jgmF6ayErR8DTu7RgATowpY6",
+                              refreshToken:"1/Sdz9xu3KWIV-4d67yTjNqCMtHJkblR4IwiPEbL40Yac"
+                            })
+                          }
+                        }));
+                      //   transporter.use("compile",mailerhbs({
+                      //       viewEngine:{
+                      //         extName:'.hbs',
+                      //         partialsDir:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
+                      //         layoutsDir:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
+                      //         defaultLayout:"emailVerification.hbs"
+                      //       },
+                      //       viewPath:"/home/chiggi/Desktop/mindsprint-backend-version-2.0/misc",
+                      //       extName:'.hbs'
+                      //   }));
+                        // console.log(u);
+                        // if (u!==undefined){
+                      const mailOptions = {
+                        from: 'CS18B006 CHIRAG GUPTA <cs18b006@iittp.ac.in>',
+                        to: emailId,
+                        subject: 'Email verification',
+                        html: `<!doctype html>
+                        <html>
+                          <head>
+                            <meta charset="utf-8">
+                            <style amp4email-boilerplate>body{visibility:hidden}</style>
+                            <script async src="https://cdn.ampproject.org/v0.js"></script>
+                            <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+                          </head>
+                          <body>
+                            <div>
+                                copy this <strong>${secretToken}</strong>
+                            </div>
+                            <div>
+                                click  <a href = "http://localhost:3000/emailVerification" onclick = "console.log('choga')">here</a> and verify your email.
+                            </div>
+                            <div>Have a nice day.</div>
+                            <script
+                            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                            crossorigin="anonymous"
+                            ></script>
+                            <script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                            crossorigin="anonymous"
+                            ></script>
+                            <script
+                            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                            crossorigin="anonymous"
+                            ></script>
 
-                      </body>
-                    </html>`,
-                    context:{
-                        hostUrl:req.headers.host,
-                        name:emailId,
-                        token:secretToken
-                    }
-                  };
-                //   transporter.verify(    )
-                  transporter.sendMail(mailOptions, function(error, info){
-                    if (error) {
-                      console.log(error);
-                      res.status(200).json({error:error.message});
-                    } else {
-                      console.log('Email sent');
-                      console.log(info);
-                      res.status(200).json({success:"Email has been sent successfully for email Verification"});
-                    }
-                  });
+                          </body>
+                        </html>`,
+                        context:{
+                            hostUrl:req.headers.host,
+                            name:emailId,
+                            token:secretToken
+                        }
+                      };
+                      // transporter.verify()
+                      emailExistence.check(emailId,async function(error,response){
+                        console.log('response inside email-existence is',response);
+                        try{
+                          if (response){
+                            await transporter.sendMail(mailOptions, async function(error, info){
+                              try{
+                                console.log('Email sent');
+                                console.log(info);
+                                res.status(200).json({success:"Email has been sent successfully for email Verification"});
+                              }catch(err){
+                                await Student.deleteOne({emailId:emailId});
+                                console.log(error);
+                                res.status(200).json({error:error.message});
+                              }
+    
+                            });                    
+                          }else{
+                            await Student.deleteOne({emailId:emailId});
+                            res.status(200).json({error:"Invalid email-Id"});
+                          }
+                        }catch(err){
+                          await Student.deleteOne({emailId:emailId});
+                          res.status(200).json({error:err.message});
+                        }
+
+                      });
+
+                      
+                    }catch(err){
+                      await Student.deleteOne({emailId:emailId});
+                      res.status(200).json({error:err.message});
+                    }  
           
         })
         .catch(async (err)=>{
