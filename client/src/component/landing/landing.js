@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import List from "./lists/lists";
+import Corousel from "../corousel/Corousel";
+import Jumbo from "../jumbotron/jumbotron";
+import Perks from "../Perks/perk";
 
-export default function Faqs() {
+export default function Landing() {
   const [loading, setload] = useState(true);
   setTimeout(() => {
     setload(false);
@@ -23,7 +25,9 @@ export default function Faqs() {
         </div>
       ) : (
         <div>
-          <List />
+          <Corousel />
+          <Perks />
+          <Jumbo />
         </div>
       )}
     </>

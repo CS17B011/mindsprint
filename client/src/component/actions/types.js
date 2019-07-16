@@ -1,0 +1,10 @@
+export const REGISTER = "REGISTER";
+export const ERROR = "ERROR";
+export const SUCCESS = "success";
+export const GOOGLE_OAUTH = "GOGOLE_OAUTH";
+export const FACEBOOK_OAUTH = "FACEBOOK_OAUTH";
+export const EMAIL_VERIFICATION = "EMAIL_VERIFICATION";
+export const LOCAL_LOGIN = "LOCAL_LOGIN";
+export const LOGOUT = "LOGOUT";
+export const UNAUTHORIZED = 'UNAUTHORIZED';
+export const REMOVE_MESSAGE = "REMOVE_MESSAGE";

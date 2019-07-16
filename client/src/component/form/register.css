@@ -18,3 +18,22 @@
   display: flex;
   justify-content: center;
 }
+
+.test{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.test1{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.kep-login-facebook.metro{
+  width:100%;
+  height: 50px;
+  padding: inherit;
+}
+p span{
+  width:100%;
+}

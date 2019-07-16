@@ -1,15 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import {connect} from 'react-redux';
 import Burger from "../SideDrawer/Burger";
+import * as actions from '../../actions/index';
+import {reduxForm} from 'redux-form';
+import {compose} from 'redux';
 import "./Toolbar.css";
 
-const toolbar = props => (
-  <header className='toolbar'>
+class Toolbar extends React.Component {
+  
+  logoutSubmit = async ()=>{
+    console.log('insde logout submit');
+    await this.props.logout();
+    // await this.props.r
+    // this.props.history.push('/');
+  }
+  removeMessage = async ()=>{
+    await this.props.removeMessage();
+  }
+
+  render(){
+    const {handleSubmit} = this.props;
+    return (
+      <header className='toolbar'>
     <nav className='toolbar__navigation'>
       <div className='spacer2' />
       <div className='toolbar__logo'>
-        <Link to='/'>
+        <Link to='/' onClick = {this.removeMessage}>
           <i className='arrow-left fa fas fa-less-than fa-lg' />
           <span className='logo-text'>MINDSPRINT</span>
 
@@ -20,35 +37,55 @@ const toolbar = props => (
       <div className='toolbar_navigation-items'>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/" onClick = {this.removeMessage}>HOME</Link>
           </li>
           <li>
-            <Link to="/about">ABOUT</Link>
+            <Link to="/about" onClick = {this.removeMessage}>ABOUT</Link>
           </li>
           <li>
-            <Link to="/downloads">DOWNLOADS</Link>
+            <Link to="/downloads" onClick = {this.removeMessage}>DOWNLOADS</Link>
           </li>
           <li>
-            <Link to="/faqs">FAQ</Link>
+            <Link to="/faqs" onClick = {this.removeMessage}>FAQ</Link>
           </li>
           <li>
-            <Link to="/contact">CONTACT US</Link>
+            <Link to="/contact" onClick = {this.removeMessage}>CONTACT US</Link>
           </li>
-          <li>
-            <Link to="/login">LOGIN</Link>
-          </li>
-          <li>
-            <Link className="special-button" id="onReg" to="/register">
-              REGISTER NOW
-            </Link>
-          </li>
+          {
+            !this.props.isAuth? 
+            <li>
+              <Link to="/login" onClick = {this.removeMessage}>LOGIN</Link>
+            </li>:null
+          }
+          {
+            !this.props.isAuth?
+            <li>
+              <Link className="special-button" id="onReg" to="/register" onClick = {this.removeMessage}>
+                REGISTER NOW
+              </Link>
+            </li>:null
+          }
+          {
+            this.props.isAuth? 
+                <li><Link to = "/" onClick = {handleSubmit(this.logoutSubmit)}>LOGOUT</Link></li>
+                  :null
+          }
         </ul>
       </div>
       <div className='toolbar__toggle-button'>
-        <Burger click={props.drawer} xbtn={props.xbtn} />
+        <Burger click={this.props.drawer} xbtn={this.props.xbtn} />
       </div>
     </nav>
   </header>
-);
+    )
+  }
+};
 
-export default toolbar;
+const mapStateToProps = (state)=>{
+  console.log('state inside mapStateToProps',state);
+  return {
+    isAuth:state.auth.isAuthenticated
+  }
+}
+
+export default compose(connect(mapStateToProps,actions),reduxForm({form:"logout"}))(Toolbar);

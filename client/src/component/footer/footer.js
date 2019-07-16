@@ -4,7 +4,7 @@ import "./footer.css";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="page-footer font-small pt-4 clr" id="mb-0 clr">
+      <footer className="page-footer font-small blue pt-4 " id="mb-0">
         <div className="container-fluid text-center text-md-left">
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
@@ -106,7 +106,7 @@ export default class Footer extends Component {
           </div>
         </div>
 
-        <div className="footer-copyright text-center py-3  clr1">
+        <div className="footer-copyright text-center py-3 indigo">
           © 2019 Copyright:
           <a href="#1" id="xd">
             {" "}
