@@ -1,0 +1,21 @@
+/* .blue {
+  background: #007bff;
+  color: white;
+}
+.indigo {
+  background: #6610f2;
+}
+.white {
+  color: white;
+} */
+#xd:hover {
+  color: rgb(233, 66, 15);
+  padding-left: 6px;
+  transition: all 0.3s ease-in-out;
+}
+#xd {
+  font-weight: 100;
+}
+#mb-0 {
+  margin-bottom: 0;
+}

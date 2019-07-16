@@ -1,0 +1,39 @@
+#clr {
+  color: rgb(25, 103, 213);
+}
+#hvr:hover {
+  background: linear-gradient(to right, #dc2424, #4a569d);
+  color: white;
+}
+#shadow {
+  box-shadow: 5px 10px #888888;
+}
+#plw {
+  max-width: 400px;
+}
+/* .css-bg1rzq-control {
+  max-width: 500px;
+} */
+.ctr {
+  display: flex;
+  justify-content: center;
+}
+
+.test{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.test1{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.kep-login-facebook.metro{
+  width:100%;
+  height: 50px;
+  padding: inherit;
+}
+p span{
+  width:100%;
+}
