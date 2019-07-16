@@ -14,7 +14,7 @@ import Contact from "./component/contact/contact";
 import Faqs from "./component/faqs/faqs";
 import Query from "./component/query/query";
 import School from "./component/form/school";
-// import Downloads from "./component/downloads/download";
+import Downloads from "./component/downloads/download";
 
 class App extends Component {
   render() {
@@ -31,7 +31,7 @@ class App extends Component {
             <Route exact path="/faqs" component={Faqs} />
             <Route exact path="/school" component={School} />
             <Route exact path="/query" component={Query} />
-            {/* <Route exact path="/downloads" component={Downloads} /> */}
+            <Route exact path="/downloads" component={Downloads} />
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/about" component={About} />
