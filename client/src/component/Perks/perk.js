@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class jumbotron extends Component {
   style = {
     backgroundImage:
-      "url(https://www.xmple.com/wallpaper/blue-purple-linear-gradient-1920x1080-c2-ee82ee-40e0d0-a-15-f-14.svg)"
+      "url(https://wallimpex.com/data/out/697/dark-blue-backgrounds-10496281.jpg)"
   };
 
   render() {
