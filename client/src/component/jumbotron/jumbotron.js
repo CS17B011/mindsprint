@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default class jumbotron extends Component {
   style = {
     backgroundImage:
-      "url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg)"
+      "url(https://wallpaperplay.com/walls/full/a/7/d/182541.jpg)"
   };
 
   render() {
@@ -16,11 +16,9 @@ export default class jumbotron extends Component {
             <h2 className="card-title h1-responsive pt-3 mb-5 font-bold">
               <strong>Description About Exam</strong>
             </h2>
-            <p className="mx-5 mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
-              fugiat, laboriosam, voluptatem, optio vero odio nam sit officia
-              accusamus minus error nisi architecto nulla ipsum dignissimos.
-              Odit sed qui, dolorum!
+            <p className="mx-2 mb-5" id="fnt">
+              If the organizer is able to bring greater than 75 registrations
+              he/she can get free tirutsava merchandise.
             </p>
             <Link to="/downloads">
               <button id="hvr" className="btn btn-outline-white btn-md">

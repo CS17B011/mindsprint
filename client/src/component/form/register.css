@@ -8,3 +8,13 @@
 #shadow {
   box-shadow: 5px 10px #888888;
 }
+#plw {
+  max-width: 400px;
+}
+/* .css-bg1rzq-control {
+  max-width: 500px;
+} */
+.ctr {
+  display: flex;
+  justify-content: center;
+}

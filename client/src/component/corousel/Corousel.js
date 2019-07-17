@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./colo.css";
 import Information from "./information.jpg";
-import Second from "./second.jpeg";
-import Third from "./third.jpeg";
+import Second from "./second.jpg";
+import Third from "./third.jpg";
 
 class Corousel extends Component {
   render() {
@@ -28,13 +28,13 @@ class Corousel extends Component {
                 <img
                   src={Information}
                   className="d-block w-100"
-                  style={{ maxHeight: "850px", minHeight: "232px" }}
+                  style={{ maxHeight: "850px", minHeight: "230px" }}
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  style={{ maxHeight: "850px", minHeight: "232px" }}
+                  style={{ maxHeight: "850px", minHeight: "230px" }}
                   src={Second}
                   className="d-block w-100"
                   alt="..."
@@ -48,7 +48,7 @@ class Corousel extends Component {
               </div>
               <div className="carousel-item">
                 <img
-                  style={{ maxHeight: "850px", minHeight: "232px" }}
+                  style={{ maxHeight: "850px", minHeight: "230px" }}
                   src={Third}
                   className="d-block w-100"
                   alt="..."

@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.download-card{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    background: white;
+    transition: all 0.5s;
+    align-items: center;
+    border-top-left-radius: 25px;
+border-bottom-right-radius: 25px;
+    box-shadow: 0 8px 27px rgba(90, 111, 120, 0.15);
+}
+
+.download-name{
+    text-align:center;
+    color: black;
+    height:25%;
+    margin: 1rem;
+    font-weight: lighter
+}
+
+.download-year{
+    text-align: center;
+    height:20%;
+
+}
+
+.download-type{
+    text-align: center;
+    height:20%
+}
+
+.download-card:hover{
+    transform: scale(1.03);
+    border-top-right-radius: 25px;
+border-bottom-left-radius: 25px;
+border-top-left-radius: 0;
+border-bottom-right-radius: 0;
+}
+
+.download-button{
+   
+    padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
+  text-align: center;
+  color: black;
+  width: 50%;
+  margin: 1rem;
+}

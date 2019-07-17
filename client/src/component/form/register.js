@@ -1,6 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import "./register.css";
+import "./school";
 
 const FormPage = () => {
   return (
@@ -219,6 +220,9 @@ const FormPage = () => {
           </div>
           <p className="text-center">
             Have an account? <Link to="/login">Log In</Link>{" "}
+          </p>
+          <p className="text-center">
+            Select a School? <Link to="/school">Schools</Link>{" "}
           </p>
         </form>
       </article>
