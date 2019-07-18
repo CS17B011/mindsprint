@@ -1,0 +1,10 @@
+.card {
+  margin:20px auto;
+  color: red;
+}
+
+.jumbotron {
+  color: black;
+  background-color: grey;
+  font-size: 30px;
+}

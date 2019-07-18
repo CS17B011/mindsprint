@@ -78,67 +78,67 @@ class App extends React.Component {
               <MDBCard>
                 <MDBCardBody>
                   <form>
-                    <p className="h4 text-center py-4">Select Your School</p>
-                    <label className="grey-text font-weight-light" />
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter Your School Code"
-                    />
-                    <label className="grey-text font-weight-light" />
-                    <span className="ctr">OR</span>
-                    <label className="grey-text font-weight-light" />
-                    <Select
-                      placeholder="State"
-                      isClearable
-                      value={selectedOption}
-                      onChange={this.handleChange}
-                      options={this.state.showDoubt}
-                      getOptionLabel={option => option.title}
-                      getOptionValue={option => option.title}
-                    />
-                    <label className="grey-text font-weight-light" />
-                    <Select
-                      isClearable
-                      placeholder="City"
-                      value={selectedOption1}
-                      onChange={this.handleChange1}
-                      options={this.state.showDoubt}
-                      getOptionLabel={option => option.body}
-                      getOptionValue={option => option.body}
-                    />
-                    {/* <input
-                      type="email"
-                      id="defaultFormCardEmailEx"
-                      className="form-control"
-                      placeholder="Your Email"
-                    /> */}
-                    <label className="grey-text font-weight-light" />
-                    <Select
-                      isClearable
-                      placeholder="School"
-                      value={selectedOption2}
-                      onChange={this.handleChange2}
-                      options={this.state.showDoubt}
-                      getOptionLabel={option => option.id}
-                      getOptionValue={option => option.id}
-                    />
-                    {/* <input
-                      type="email"
-                      id="defaultFormCardEmailEx"
-                      className="form-control"
-                      placeholder="Your Doubt Here"
-                    /> */}
-                    <div className="text-center py-4 mt-3">
-                      <MDBBtn
-                        id="hvr"
-                        className="btn btn-outline-purple"
-                        type="submit"
-                      >
-                        Select
-                        <MDBIcon far icon="paper-plane" className="ml-2" />
-                      </MDBBtn>
-                    </div>
+                  <p className="h4 text-center py-4">Select Your School</p>
+                  <label className="grey-text font-weight-light" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Your School Code"
+                  />
+                  <label className="grey-text font-weight-light" />
+                  <span className="ctr">OR</span>
+                  <label className="grey-text font-weight-light" />
+                  <Select
+                    placeholder="State"
+                    isClearable
+                    value={selectedOption}
+                    onChange={this.handleChange}
+                    options={this.state.showDoubt}
+                    getOptionLabel={option => option.title}
+                    getOptionValue={option => option.title}
+                  />
+                  <label className="grey-text font-weight-light" />
+                  <Select
+                    isClearable
+                    placeholder="City"
+                    value={selectedOption1}
+                    onChange={this.handleChange1}
+                    options={this.state.showDoubt}
+                    getOptionLabel={option => option.body}
+                    getOptionValue={option => option.body}
+                  />
+                  {/* <input
+                    type="email"
+                    id="defaultFormCardEmailEx"
+                    className="form-control"
+                    placeholder="Your Email"
+                  /> */}
+                  <label className="grey-text font-weight-light" />
+                  <Select
+                    isClearable
+                    placeholder="School"
+                    value={selectedOption2}
+                    onChange={this.handleChange2}
+                    options={this.state.showDoubt}
+                    getOptionLabel={option => option.id}
+                    getOptionValue={option => option.id}
+                  />
+                  {/* <input
+                    type="email"
+                    id="defaultFormCardEmailEx"
+                    className="form-control"
+                    placeholder="Your Doubt Here"
+                  /> */}
+                  <div className="text-center py-4 mt-3">
+                    <MDBBtn
+                      id="hvr"
+                      className="btn btn-outline-purple"
+                      type="submit"
+                    >
+                      Select
+                      <MDBIcon far icon="paper-plane" className="ml-2" />
+                    </MDBBtn>
+                  </div>
                   </form>
                 </MDBCardBody>
               </MDBCard>
